@@ -154,5 +154,92 @@ function filterStories(stories, filterText) {
 
 
 
+// Listagem no HTML
+function listaStories(book) {
+  const storiesContainer = document.getElementById("stories-list");
+  const storiesPopularbox = document.getElementById("popular-box");
+
+  // Exibe o elemento com o ID "popular-box"
+  document.getElementById("popular-box").style.display = "flex";
+
+    // Limpa os containers antes de adicionar novos elementos
+    storiesContainer.innerHTML = "";
+    storiesPopularbox.innerHTML = "";
+
+    // Cria um array com os valores da chave "nome" de cada item de book
+    const chavesNomes = Object.values(book).map(item => item.nome);
+
+    // Ordena o array em ordem alfabética
+    const nomesOrdenados = chavesNomes.sort();
+
+    // Cria um novo objeto com os itens na ordem dos nomes ordenados
+    const bookOrdenado = nomesOrdenados.reduce((acc, nome) => {
+      const [chave, valor] = Object.entries(book).find(([chave, valor]) => valor.nome === nome);
+      acc[chave] = valor;
+      return acc;
+      }, {});
+    
+    // Lista as histórias populares
+    let count = 0;
+    for (const storyId in book) {
+      if (count >= 5) {
+        break;
+      }
+
+      const popStory = book[storyId];
+
+      const storyDiv = document.createElement("div");
+      storyDiv.classList.add("story-box");
+
+      const imgElement = document.createElement("img");
+      imgElement.src = popStory.url;
+      imgElement.alt = popStory.nome;
+      storyDiv.appendChild(imgElement);
+
+      const nomeElement = document.createElement("p");
+      nomeElement.textContent = popStory.nome;
+      storyDiv.appendChild(nomeElement);
+
+      storyDiv.addEventListener("click", function() {
+        const url = `story_detail.html?id=${storyId}`;
+        window.location.href = url;
+      });
+
+      storiesPopularbox.appendChild(storyDiv);
+      count++;
+    }
+    
+    // Lista todas as histórias do array
+    for (const storyId in bookOrdenado) {
+      const story = bookOrdenado[storyId];
+
+      // criar um elemento div para a história
+      const storyDiv = document.createElement("div");
+      storyDiv.classList.add("story-box");
+
+      // criar um elemento de imagem para a história
+      const imgElement = document.createElement("img");
+      imgElement.src = story.url;
+      imgElement.alt = story.nome;
+      storyDiv.appendChild(imgElement);
+
+      // criar um elemento de parágrafo para o nome da história
+      const nomeElement = document.createElement("p");
+      nomeElement.textContent = story.nome;
+      storyDiv.appendChild(nomeElement);
+
+      // adicionar um manipulador de eventos de clique à história
+      storyDiv.addEventListener("click", function() {
+        // navegar para a página de detalhes da história
+        const url = `story_detail.html?id=${storyId}`;
+        window.location.href = url;
+      });
+
+      // adicionar a história ao container de histórias
+      storiesContainer.appendChild(storyDiv);
+    }
+}
+
+
 
 
