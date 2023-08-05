@@ -1,0 +1,168 @@
+
+:root{
+
+  --cor_primario: #76c08f;
+  --cor_secundario: #c1c1c1;
+  --borda: #e1e1e1;
+  --branco_primario: #fff;
+  --branco_secundario: #f9f9f9;
+  --sombra: #ccc;
+
+}
+
+/* Estilos para o body */
+body {
+    background-color: var(--cor_primario);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+  }
+  
+  /* Estilos para o main */
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    flex-direction: column;
+  }
+
+  .top-bar{
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  #voltar{
+    font-family: 'Comic Neue';
+    font-size: 22px;
+    color: var(--branco_secundario);
+    text-shadow: 0px 0px 5px #888;
+  }
+
+  #share{
+    width: 30px;
+    height: 30px;
+    margin-left: auto;
+    margin-right: 20px;
+    position: relative;
+    opacity: 0.6;
+  }
+
+  #share:active{
+    opacity: 1;
+  }
+
+    
+  /* Estilos para o container principal */
+  .container {
+    min-height: 95vh;
+    width: 98%;
+    margin: auto;
+    margin-top: 20px;
+    background-color: var(--branco_secundario);
+    border-radius: 20px 20px 5px 5px;
+    box-shadow: 0 0px 10px #888;
+  }
+
+  .container p{
+    text-align: justify;
+    color: var(--branco-normal)
+    
+  }
+  
+  /* Estilos para a imagem */
+  #imagem {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px 20px 0px 0px;
+  }
+
+  
+  /* Estilos para o título */
+  #nome {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 0;
+    text-align: center;
+    color: var(--cor_primario);
+    font-family: 'Comic Neue', cursive;
+  }
+
+  #autor{
+    display: flex;
+    margin: 5px auto;
+    justify-content: center;
+    color: var(--sombra);
+    font-style: italic;
+  }
+
+  .btns{
+    width: 100%;
+    display: flex;
+  }
+
+  .zoom {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: var(--branco_secundario);
+    box-sizing: border-box;
+    border: none;
+    background-color: var(--cor_primario);
+    opacity: 0.4;
+  }
+
+  #zoom-menos{
+    margin: 0 20px;
+  }
+
+  #zoom-mais{
+    margin-left: auto;
+  }
+
+  .zoom:active {
+    opacity: 0.8;
+  }
+  
+  /* Estilos para o texto */
+  #texto {
+    font-size: 25px;
+    line-height: 1.5;
+    text-align: justify;
+    color: #6f6f6f;
+    font-family: 'Coming Soon', cursive;
+    padding: 15px;
+    font-weight: bold;
+  }
+
+
+   /* Estilo do rodapé */
+footer {
+  height: 6vh;
+  max-height: 58px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid var(--amarelo);
+
+  text-align: center;
+
+  margin: auto;
+}
+
+footer p {
+  font-size: 16px;
+  color: var(--branco-normal);
+}
+  
+  
+  
+  
