@@ -104,7 +104,7 @@ document.getElementById('zoom-menos').addEventListener('click', function() {
 function compartilharWhatsApp() {
   const titulo = document.getElementById('nome').textContent;
   // Mensagem padrão que será compartilhada no WhatsApp
-  const mensagemPadrao = `Confira a história _${titulo}_ em `
+  const mensagemPadrao = `Confira a história _${titulo}_ e outras em `
 
   // URL da página que você deseja compartilhar
   const urlPagina = window.location.href;
