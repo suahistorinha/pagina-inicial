@@ -168,8 +168,8 @@ footer p {
 
 #marcador {
   position: fixed;
-  bottom: 20px; /* Distância do canto inferior em relação à borda da tela */
-  right: 20px; /* Distância do canto direito em relação à borda da tela */
+  bottom: 10px; /* Distância do canto inferior em relação à borda da tela */
+  right: 30px; /* Distância do canto direito em relação à borda da tela */
   width: 50px; /* Largura da imagem, ajuste conforme necessário */
   height: auto; /* Altura da imagem será ajustada proporcionalmente */
   cursor: pointer;
