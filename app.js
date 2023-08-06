@@ -128,6 +128,21 @@ document.getElementById('filter-4').addEventListener('click', function(){
   listaStories(filteredStories);
 });
 
+document.getElementById('filter-5').addEventListener('click', function(){
+  // Remove a classe "active" do botão ativo anterior
+  if (activeButton) {
+    activeButton.classList.remove('active');
+  }
+  // Define o botão atual como ativo e atualiza a variável "activeButton"
+  activeButton = document.getElementById('filter-5');
+  activeButton.classList.add('active');
+
+  // Chama a função para filtrar e classificar as histórias
+  const filteredStories = filterStories(acervo, activeButton.textContent);
+  // Atualiza a lista de histórias na página
+  listaStories(filteredStories);
+});
+
 
 
 // Função para filtrar e classificar as histórias
