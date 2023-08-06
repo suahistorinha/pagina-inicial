@@ -41,6 +41,7 @@ main {
   justify-content: space-between;
   padding: 20px;
   margin: auto;
+  min-height: 85vh;
 }
 
 
