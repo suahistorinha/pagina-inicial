@@ -88,6 +88,30 @@
     </div>
   </footer>
   
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyAMbGHoT0qbYk4pn0BiaJMxEmudcmpAuts",
+    authDomain: "suahistorinha-db.firebaseapp.com",
+    databaseURL: "https://suahistorinha-db-default-rtdb.firebaseio.com",
+    projectId: "suahistorinha-db",
+    storageBucket: "suahistorinha-db.appspot.com",
+    messagingSenderId: "424745990905",
+    appId: "1:424745990905:web:e09398c2daf594ab5bc028",
+    measurementId: "G-NTSHF6L3MK"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
 <script src="app.js"></script>
 </body>
 </html>
