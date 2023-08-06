@@ -1,5 +1,6 @@
 const params = new URLSearchParams(window.location.search);
 const contoId = params.get("id");
+let marcador = 0;
 
 // Define o endpoint da API REST do Firebase
 const firebaseEndpoint = `https://suahistorinha-db-default-rtdb.firebaseio.com/stories/${contoId}/.json`;
@@ -52,7 +53,7 @@ function incrementAccessCount(contoId, nac) {
 
 
 //Controla o processamento do incremento apenas 1 vez
-let hasAccessCountIncremented = false;
+let hasAccessCountIncremented = true;
 
 function onScroll() {
   if (hasAccessCountIncremented) {
@@ -104,7 +105,7 @@ document.getElementById('zoom-menos').addEventListener('click', function() {
 function compartilharWhatsApp() {
   const titulo = document.getElementById('nome').textContent;
   // Mensagem padrão que será compartilhada no WhatsApp
-  const mensagemPadrao = `Confira a história _${titulo}_ e outras em `
+  const mensagemPadrao = `Confira a história _${titulo}_ em `
 
   // URL da página que você deseja compartilhar
   const urlPagina = window.location.href;
@@ -120,4 +121,73 @@ function compartilharWhatsApp() {
 }
 
 document.getElementById('share').addEventListener('click', function(){compartilharWhatsApp();})
+  
+
+// Função para salvar o progresso no Local Storage
+function salvarProgresso() {
+  // Obtém a posição da barra de rolagem vertical da página
+  const posicaoBarraRolagem = window.scrollY;
+  
+  // Obtém o ID da história a partir do parâmetro da URL (por exemplo, '?id=1')
+  const urlParams = new URLSearchParams(window.location.search);
+  const historiaId = urlParams.get('id');
+
+  // Cria um objeto com a posição da barra de rolagem e o ID da história
+  const progresso = { id: historiaId, posicao: posicaoBarraRolagem };
+
+  // Converte o objeto para uma string JSON
+  const progressoJSON = JSON.stringify(progresso);
+
+  // Armazena o progresso no Local Storage com a chave "progresso_historia_1", onde "1" é o ID da história
+  localStorage.setItem(`progresso_historia_${historiaId}`, progressoJSON);
+
+  marcador = 1;
+  document.getElementById('marcador').style.opacity = 1;
+  alert('Marcador de progresso adicionado! Você pode retornar a este ponto mais tarde.');
+}
+
+// Função para carregar o progresso salvo no Local Storage
+function carregarProgresso() {
+  // Obtém o ID da história a partir do parâmetro da URL (por exemplo, '?id=1')
+  const urlParams = new URLSearchParams(window.location.search);
+  const historiaId = urlParams.get('id');
+
+  // Obtém o progresso salvo do Local Storage com a chave "progresso_historia_1", onde "1" é o ID da história
+  const progressoJSON = localStorage.getItem(`progresso_historia_${historiaId}`);
+
+  if (progressoJSON) {
+    // Se houver um progresso salvo, converte a string JSON de volta para um objeto
+    const progresso = JSON.parse(progressoJSON);
+
+    // Define a posição da barra de rolagem da página para a posição salva
+    window.scrollTo(0, progresso.posicao);
+
+    marcador = 1;
+    document.getElementById('marcador').style.opacity = 1;
+  }
+}
+
+function apagarProgresso() {
+  // Obtém o ID da história a partir do parâmetro da URL (por exemplo, '?id=1')
+  const urlParams = new URLSearchParams(window.location.search);
+  const historiaId = urlParams.get('id');
+
+  // Remove o registro de progresso do Local Storage com a chave "progresso_historia_1", onde "1" é o ID da história
+  localStorage.removeItem(`progresso_historia_${historiaId}`);
+  
+  marcador = 0;
+  document.getElementById('marcador').style.opacity = 0.3;
+  alert('Marcador de progresso removido!');
+}
+
+// Chama a função para carregar o progresso quando a página for carregada
+carregarProgresso();
+
+document.getElementById('marcador').addEventListener('click', function(){
+  if(marcador == 0){
+    salvarProgresso();
+  } else if (marcador == 1){
+    apagarProgresso();
+  };
+});
   
