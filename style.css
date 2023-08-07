@@ -131,8 +131,7 @@ main {
 
 /* Estilo do rodapé */
 footer {
-  height: 6vh;
-  max-height: 58px;
+  flex-direction: column;
   display: flex;
   justify-content: center;
   align-items: center;
