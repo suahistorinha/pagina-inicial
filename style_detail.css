@@ -175,6 +175,10 @@ footer p {
   cursor: pointer;
   opacity: 0.3;
 }
+
+.privacidade {
+  color: var(--branco_secundario);
+}
   
   
   
