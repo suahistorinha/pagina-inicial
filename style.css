@@ -131,8 +131,8 @@ main {
 
 /* Estilo do rodapé */
 footer {
-  flex-direction: column;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   border-top: 1px solid var(--cinza_primario);
