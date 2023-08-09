@@ -53,7 +53,7 @@ function incrementAccessCount(contoId, nac) {
 
 
 //Controla o processamento do incremento apenas 1 vez
-let hasAccessCountIncremented = true;
+let hasAccessCountIncremented = false;
 
 function onScroll() {
   if (hasAccessCountIncremented) {
