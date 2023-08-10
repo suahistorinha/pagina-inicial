@@ -74,12 +74,6 @@ function onScroll() {
 
 window.addEventListener('scroll', onScroll);
 
-// Adiciona o ouvinte de evento click ao botão
-document.getElementById('voltar').addEventListener('click', function() {
-  // Redireciona para a página index.html
-  window.location.href = 'index.html';})
-
-
 
 
 // Adiciona o ouvinte de evento click ao botão
