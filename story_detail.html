@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sua historinha</title>
+    <!-- incluir o favicon -->
+    <link rel="icon" href="Assets/icon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style_detail.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,9 +24,23 @@
     </style>
   </head>
   <body>
+    <nav class="menu-topo">
+
+      <div class="logo">
+        <img src="Assets/logo.png" alt="logo do site Sua historinha">
+      
+      <div class="menu">
+          <div class="bnt_home">
+              <a href="index.html">Página Inicial</a>
+          </div>
+          
+      </div>
+          
+          </div>  
+
+    </nav>
     <main>
       <div class="top-bar">
-        <span id="voltar">< voltar</span>
         <img  id="share" src="Assets/share.png" alt="">
       </div>
 
@@ -41,7 +57,24 @@
       </div>
     </main>
     <img src="Assets/marcador.png" alt="marcador" id="marcador">
-    <footer><p>Sua historinha &copy; 2023</p></footer>
+    <footer class="footer">
+      <div class="footer-info">
+        <p>Minhas Histórias © 2023</p>
+        <p>Todos os direitos reservados</p>
+      </div>
+  
+      <div class="social-links">
+        <a href="privacidade.html" class="social-link">
+          <i class="fab fa-facebook-f">Política de Privacidade</i>
+        </a>
+        <a href="termos_de_uso.html" class="social-link">
+          <i class="fab fa-instagram">Termos de Uso</i>
+        </a>
+        <a href="sobre_nos.html" class="social-link">
+          <i class="fab fa-twitter">Sobre Nós</i>
+        </a>
+      </div>
+    </footer>
     <script src="story_detail.js"></script>
   </body>
 </html>
