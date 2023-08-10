@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
+<html lang="pt-br"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -8,7 +6,6 @@
   <meta name="description" content="Bem-vindo à página de leitura de histórias infantis! Aqui você encontrará uma coleção de contos de fadas clássicos e fábulas, perfeitos para entreter e ensinar lições valiosas aos pequenos leitores.">
   <meta name="keywords" content="historinha infantil, livro de historia infantil, literatura infantil, história infantil bíblica, livro infantil, livros infantis para leitura, história infantil, contos de fadas, fábulas, aventuras, para dormir, leia para uma criança, livro de história, livro digital, historia de ninar">
   <meta name="keywords" content="historinhas bíblicas infantis, conteúdo cristão para crianças, ensinamentos bíblicos para crianças, parábolas infantis, personagens bíblicos para crianças, valores cristãos, fé para crianças">
-
     <meta name="keywords" content="A Bela Adormecida é um conto de fadas clássico, em que uma princesa é amaldiçoada a dormir por cem anos até ser acordada pelo beijo de um príncipe encantado.">
     <meta name="keywords" content="A Bela e a Fera é uma história de amor e redenção, em que uma jovem chamada Bela se apaixona por uma Fera amaldiçoada e aprende a enxergar a beleza interior em meio a aparências assustadoras.">
     <meta name="keywords" content="A Lebre e a Tartaruga é uma fábula que ensina a importância da perseverança e do trabalho árduo, mostrando que a velocidade nem sempre é o fator determinante para alcançar o sucesso.">
@@ -58,11 +55,13 @@
     <meta name="keywords" content="história bíblica infantil, parábola do bom pastor, cuidado, proteção, amor de Jesus">
 
   <title>Sua historinha</title>
+  <!-- incluir o favicon -->
+  <link rel="icon" href="Assets/icon.ico" type="image/x-icon">
   
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Coming+Soon&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&amp;family=Coming+Soon&amp;display=swap" rel="stylesheet">
   
 
   <style>
@@ -79,7 +78,7 @@
   </style>
 
   
-</head>
+<script src="https://www.googletagmanager.com/gtag/js?l=dataLayer&amp;id=G-NTSHF6L3MK" async=""></script></head>
 <body>
 
   <div class="textura"></div>
@@ -88,6 +87,14 @@
 
     <div class="logo">
       <img src="Assets/logo.png" alt="logo do site Sua historinha">
+    
+<div class="menu">
+    <div class="bnt_home">
+        <a href="index.html">Página Inicial</a>
+    </div>
+    
+</div>
+    
     </div>  
 
   </nav>
@@ -95,9 +102,9 @@
   <main>
     <div class="content">
       <div class="main-column" id="categorias-box">
-
+        <div class="titulos"><h5>FILTROS</h5></div>
         <div class="buttons">
-          <button class="filter-button" id="todas">Todas</button>
+          <button class="filter-button active" id="todas">Todas</button>
           <button class="filter-button" id="filter-1">Contos de fadas</button>
           <button class="filter-button" id="filter-2">Fábulas</button>
           <button class="filter-button" id="filter-3">Animais</button>
@@ -108,17 +115,16 @@
       </div>
 
       <div class="titulos"><h2 id="populares">MAIS ACESSADAS</h2></div>
-      <div class="main-column" id="popular-box">
-      </div>
+      <div class="main-column" id="popular-box" style="display: flex;"><div class="story-box"><img src="Assets/arca_de_noe.jpg" alt="A Arca de Noé"><p>A Arca de Noé</p></div><div class="story-box"><img src="Assets/princesa_e_o_sapo.png" alt="A Princesa e o Sapo"><p>A Princesa e o Sapo</p></div><div class="story-box"><img src="Assets/pequena_sereia.png" alt="A Pequena Sereia"><p>A Pequena Sereia</p></div><div class="story-box"><img src="Assets/tres_porquinhos.jpg" alt="Os Três Porquinhos"><p>Os Três Porquinhos</p></div><div class="story-box"><img src="Assets/jose_do_egito.jpg" alt="José do Egito"><p>José do Egito</p></div></div>
 
       <div class="titulos"><h2 id="categorias">TODAS AS HISTÓRIAS</h2></div>
-      <div class="main-column" id="stories-list"></div>
+      <div class="main-column" id="stories-list"><div class="story-box"><img src="Assets/arca_de_noe.jpg" alt="A Arca de Noé"><p>A Arca de Noé</p></div><div class="story-box"><img src="Assets/bela_adormecida.png" alt="A Bela Adormecida"><p>A Bela Adormecida</p></div><div class="story-box"><img src="Assets/bela_e_a_fera.png" alt="A Bela e a Fera"><p>A Bela e a Fera</p></div><div class="story-box"><img src="Assets/tartaruga_e_a_lebre.jpg" alt="A Lebre e a Tartaruga"><p>A Lebre e a Tartaruga</p></div><div class="story-box"><img src="Assets/genesis.png" alt="A Maravilhosa Criação de Deus"><p>A Maravilhosa Criação de Deus</p></div><div class="story-box"><img src="Assets/pequena_sereia.png" alt="A Pequena Sereia"><p>A Pequena Sereia</p></div><div class="story-box"><img src="Assets/princesa_e_o_sapo.png" alt="A Princesa e o Sapo"><p>A Princesa e o Sapo</p></div><div class="story-box"><img src="Assets/multiplicacao_de_peixes.jpg" alt="A multiplicação dos pães e peixes"><p>A multiplicação dos pães e peixes</p></div><div class="story-box"><img src="Assets/aladdin.png" alt="Aladdin e a Lâmpada Maravilhosa"><p>Aladdin e a Lâmpada Maravilhosa</p></div><div class="story-box"><img src="Assets/boitata.png" alt="Amanã e o Lendário Boitatá"><p>Amanã e o Lendário Boitatá</p></div><div class="story-box"><img src="Assets/branca_de_neve.png" alt="Branca de Neve"><p>Branca de Neve</p></div><div class="story-box"><img src="Assets/Chapeuzinho_vermelho.png" alt="Chapeuzinho Vermelho"><p>Chapeuzinho Vermelho</p></div><div class="story-box"><img src="Assets/cinderela.png" alt="Cinderela"><p>Cinderela</p></div><div class="story-box"><img src="Assets/curupira.png" alt="Curupira"><p>Curupira</p></div><div class="story-box"><img src="Assets/daniel_na_cova_dos_leoes.jpg" alt="Daniel na Cova dos Leões"><p>Daniel na Cova dos Leões</p></div><div class="story-box"><img src="Assets/davi_e_golias.jpg" alt="Davi e Golias"><p>Davi e Golias</p></div><div class="story-box"><img src="Assets/jose_do_egito.jpg" alt="José do Egito"><p>José do Egito</p></div><div class="story-box"><img src="Assets/joao_e_maria.jpg" alt="João e Maria"><p>João e Maria</p></div><div class="story-box"><img src="Assets/moises.jpg" alt="Moisés e o Mar Vermelho"><p>Moisés e o Mar Vermelho</p></div><div class="story-box"><img src="Assets/nelinho_do_pastoreio.png" alt="Nelinho do Pastoreio"><p>Nelinho do Pastoreio</p></div><div class="story-box"><img src="Assets/bom_samaritano.jpg" alt="O Bom Samaritano"><p>O Bom Samaritano</p></div><div class="story-box"><img src="Assets/gato_de_botas.jpg" alt="O Gato de Botas"><p>O Gato de Botas</p></div><div class="story-box"><img src="Assets/nascimento_de_jesus.jpg" alt="O Nascimento de Jesus"><p>O Nascimento de Jesus</p></div><div class="story-box"><img src="Assets/patinho_feio.jpg" alt="O Patinho Feio"><p>O Patinho Feio</p></div><div class="story-box"><img src="Assets/pequeno_polegar.jpg" alt="O pequeno Polegar"><p>O pequeno Polegar</p></div><div class="story-box"><img src="Assets/soldadinho_de_chumbo.jpg" alt="O soldadinho de chumbo"><p>O soldadinho de chumbo</p></div><div class="story-box"><img src="Assets/tres_porquinhos.jpg" alt="Os Três Porquinhos"><p>Os Três Porquinhos</p></div><div class="story-box"><img src="Assets/reis_magos.jpg" alt="Os Três Reis Magos"><p>Os Três Reis Magos</p></div><div class="story-box"><img src="Assets/pinoquio.jpg" alt="Pinóquio"><p>Pinóquio</p></div><div class="story-box"><img src="Assets/rapunzel.png" alt="Rapunzel"><p>Rapunzel</p></div><div class="story-box"><img src="Assets/saci_perere.jpg" alt="Saci-Pererê"><p>Saci-Pererê</p></div></div>
     </div>      
   </main>
 
   <footer class="footer">
     <div class="footer-info">
-      <p>Minhas Histórias &copy; 2023</p>
+      <p>Minhas Histórias © 2023</p>
       <p>Todos os direitos reservados</p>
     </div>
 
@@ -126,11 +132,11 @@
       <a href="privacidade.html" class="social-link">
         <i class="fab fa-facebook-f">Política de Privacidade</i>
       </a>
-      <a href="#" class="social-link">
-        <i class="fab fa-instagram"></i>
+      <a href="termos_de_uso.html" class="social-link">
+        <i class="fab fa-instagram">Termos de Uso</i>
       </a>
-      <a href="#" class="social-link">
-        <i class="fab fa-twitter"></i>
+      <a href="sobre_nos.html" class="social-link">
+        <i class="fab fa-twitter">Sobre Nós</i>
       </a>
     </div>
   </footer>
@@ -160,5 +166,6 @@
   const analytics = getAnalytics(app);
 </script>
 <script src="app.js"></script>
-</body>
-</html>
+
+
+</body></html>
