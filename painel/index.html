@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <div class="url"></label>
+            <div class="miniatura">
+                <label for="url">URL</label>
+                <img id="miniatura" src="img/img.png">
+            </div>
+            <input id="url" type="text" name="url">
+        </div>
+        <div class="filtros">
+            <div class="filtro">
+                <label for="filtro_1">Filtro 1</label>
+                <select name="filtro_1" id="filtro_1">
+                    <option value="Contos de fadas">Contos de fadas</option>
+                    <option value="Fábulas">Fábulas</option>
+                    <option value="Aventuras">Animais</option>
+                    <option value="Nacionais">Nacionais</option>
+                    <option value="Bíblicas">Bíblicas</option>
+                </select>
+            </div>
+
+            <div class="filtro">
+                <label for="filtro_2">Filtro 2</label>
+                <select name="filtro_2" id="filtro_2">
+                    <option value="Contos de fadas">Contos de fadas</option>
+                    <option value="Fábulas">Fábulas</option>
+                    <option value="Aventuras">Aventuras</option>
+                    <option value="Nacionais">Nacionais</option>
+                    <option value="Bíblicas">Bíblicas</option>
+                </select>
+            </div>
+
+            <div class="filtro">
+                <label for="filtro_3">Filtro 3</label>
+                <select name="filtro_3" id="filtro_3">
+                    <option value="Contos de fadas">Contos de fadas</option>
+                    <option value="Fábulas">Fábulas</option>
+                    <option value="Aventuras">Aventuras</option>
+                    <option value="Nacionais">Nacionais</option>
+                    <option value="Bíblicas">Bíblicas</option>
+                </select>
+            </div>
+
+        </div>
+        <div class="titulo">
+            <label for="titulo">Título</label>
+            <input type="text" name="titulo" id="titulo">
+        </div>
+
+        <div class="autor">
+            <label for="autor">Autor</label>
+            <input type="autor" name="autor" id="autor">
+        </div>
+
+        <div class="texto">
+            <label for="texto">Texto</label>
+            <textarea name="texto" id="texto" cols="30" rows="10"></textarea>
+        </div>
+
+        <div class="leitor">
+            <label for="leitor">Visualizar:</label>
+            <p id="leitor"></p>
+        </div>
+
+        <button id="gravar" type="submit" onclick="enviarDados(event)">Gravar</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
