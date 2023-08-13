@@ -14,9 +14,9 @@ function addToFavorites() {
       favorites.push(idParam);
       localStorage.setItem('favorites', JSON.stringify(favorites));
       icon.src = 'Assets/favorited.png';      
-      alert(`Item foi adicionado aos favoritos.`);
+      alert(`O item foi adicionado aos favoritos.`);
     } else {
-        alert(`Item já está nos favoritos.`);
+        alert(`O item já está nos favoritos.`);
     }
 }
 
@@ -31,9 +31,9 @@ function removeFromFavorites() {
       favorites.splice(index, 1);
       localStorage.setItem('favorites', JSON.stringify(favorites));
       icon.src = 'Assets/no_favorited.png';
-      alert(`Item com id ${idParam} foi removido dos favoritos.`);
+      alert(`O item foi removido dos favoritos.`);
     } else {
-      alert(`Item com id ${idParam} não foi encontrado nos favoritos.`);
+      alert(`O item não foi encontrado nos favoritos.`);
     }
 }
 
