@@ -53,7 +53,7 @@ function incrementAccessCount(contoId, nac) {
 
 
 //Controla o processamento do incremento apenas 1 vez
-let hasAccessCountIncremented = false;
+let hasAccessCountIncremented = true;
 
 function onScroll() {
   if (hasAccessCountIncremented) {
@@ -117,6 +117,9 @@ function compartilharWhatsApp() {
 document.getElementById('share').addEventListener('click', function(){compartilharWhatsApp();})
   
 
+
+
+
 // Função para salvar o progresso no Local Storage
 function salvarProgresso() {
   // Obtém a posição da barra de rolagem vertical da página
@@ -137,6 +140,7 @@ function salvarProgresso() {
 
   marcador = 1;
   document.getElementById('marcador').style.opacity = 1;
+  document.getElementById('marcador').src = "Assets/marked.png";
   alert('Marcador de progresso adicionado! Você pode retornar a este ponto mais tarde.');
 }
 
@@ -158,6 +162,7 @@ function carregarProgresso() {
 
     marcador = 1;
     document.getElementById('marcador').style.opacity = 1;
+    document.getElementById('marcador').src = "Assets/marked.png";
   }
 }
 
@@ -171,6 +176,7 @@ function apagarProgresso() {
   
   marcador = 0;
   document.getElementById('marcador').style.opacity = 0.3;
+  document.getElementById('marcador').src = "Assets/no_marked.png";
   alert('Marcador de progresso removido!');
 }
 
