@@ -75,7 +75,7 @@ main {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 20px;
-  margin: 20px auto;
+  margin: 10px auto;
   min-height: 85vh;
   border-radius: 2px;
   min-width: 100%;
@@ -98,6 +98,9 @@ main {
   border-top: 1px solid var(--borda);
   }
 
+#categorias-box{
+  padding-top: 0;
+}
 
 .titulos h2, .titulos h5 {
   color: var(--cor_secundario);
