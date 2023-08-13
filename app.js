@@ -215,6 +215,30 @@ function listaStories(book) {
       nomeElement.textContent = popStory.nome;
       storyDiv.appendChild(nomeElement);
 
+      const newElement = document.createElement("img");
+      newElement.src = 'Assets/new.png';
+      newElement.style.width = '35px'; 
+      newElement.style.height = '25px'; 
+      newElement.style.borderRadius = '0px'; 
+      newElement.style.boxShadow = 'none'; 
+      newElement.style.margin = 'auto 0';
+      newElement.style.marginLeft = 'auto';
+      newElement.style.display = 'none';
+      storyDiv.appendChild(newElement);
+
+      if (popStory.hasOwnProperty('lancamento')) {
+        const dataLancamento = new Date(popStory.lancamento);
+        const hoje = new Date();
+        
+        if (!isNaN(dataLancamento.getTime())) { // Verifica se a conversão para data foi bem-sucedida
+          const diferencaDias = Math.floor((hoje - dataLancamento) / (1000 * 60 * 60 * 24));
+          
+          if (diferencaDias < 10) {
+            newElement.style.display = 'flex';
+          };
+        };
+      };
+
       storyDiv.addEventListener("click", function() {
         const url = `story_detail.html?id=${storyId}`;
         window.location.href = url;
@@ -242,6 +266,30 @@ function listaStories(book) {
       const nomeElement = document.createElement("p");
       nomeElement.textContent = story.nome;
       storyDiv.appendChild(nomeElement);
+
+      const newElement = document.createElement("img");
+      newElement.src = 'Assets/new.png';
+      newElement.style.width = '35px'; 
+      newElement.style.height = '25px'; 
+      newElement.style.borderRadius = '0px'; 
+      newElement.style.boxShadow = 'none'; 
+      newElement.style.margin = 'auto 0';
+      newElement.style.marginLeft = 'auto';
+      newElement.style.display = 'none';
+      storyDiv.appendChild(newElement);
+
+      if (popStory.hasOwnProperty('lancamento')) {
+        const dataLancamento = new Date(popStory.lancamento);
+        const hoje = new Date();
+        
+        if (!isNaN(dataLancamento.getTime())) { // Verifica se a conversão para data foi bem-sucedida
+          const diferencaDias = Math.floor((hoje - dataLancamento) / (1000 * 60 * 60 * 24));
+          
+          if (diferencaDias < 10) {
+            newElement.style.display = 'flex';
+          };
+        };
+      };
 
       // adicionar um manipulador de eventos de clique à história
       storyDiv.addEventListener("click", function() {
