@@ -278,8 +278,8 @@ function listaStories(book) {
       newElement.style.display = 'none';
       storyDiv.appendChild(newElement);
 
-      if (popStory.hasOwnProperty('lancamento')) {
-        const dataLancamento = new Date(popStory.lancamento);
+      if (story.hasOwnProperty('lancamento')) {
+        const dataLancamento = new Date(story.lancamento);
         const hoje = new Date();
         
         if (!isNaN(dataLancamento.getTime())) { // Verifica se a conversão para data foi bem-sucedida
