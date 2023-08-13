@@ -13,7 +13,8 @@ function addToFavorites() {
     if (!favorites.includes(idParam)) {
       favorites.push(idParam);
       localStorage.setItem('favorites', JSON.stringify(favorites));
-      icon.src = 'Assets/favorited.png';      
+      icon.src = 'Assets/favorited.png';  
+      icon.style.opacity = '1';
       alert(`O item foi adicionado aos favoritos.`);
     } else {
         alert(`O item já está nos favoritos.`);
@@ -31,6 +32,7 @@ function removeFromFavorites() {
       favorites.splice(index, 1);
       localStorage.setItem('favorites', JSON.stringify(favorites));
       icon.src = 'Assets/no_favorited.png';
+      icon.style.opacity = '0.6';
       alert(`O item foi removido dos favoritos.`);
     } else {
       alert(`O item não foi encontrado nos favoritos.`);
@@ -45,6 +47,7 @@ function checkFavorite () {
   
     if (favorites.includes(idParam)) {
       icon.src = 'Assets/favorited.png';
+      icon.style.opacity = '1';
     };
 }
 
