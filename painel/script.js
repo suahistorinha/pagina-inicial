@@ -27,7 +27,6 @@ function enviarDados(event) {
     const texto = formatar(document.getElementById('texto').value);
 
     const dados = {
-        'acessCount': '0',
         'filtro_1': filtro1,
         'filtro_2': filtro2,
         'filtro_3': filtro3,
