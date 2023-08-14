@@ -23,6 +23,7 @@ function enviarDados(event) {
     const filtro3 = document.getElementById('filtro_3').value;
     const titulo = document.getElementById('titulo').value;
     const autor = document.getElementById('autor').value;
+    const lancamento = document.getElementById('lancamento').value;
     const texto = formatar(document.getElementById('texto').value);
 
     const dados = {
@@ -33,7 +34,8 @@ function enviarDados(event) {
         'nome': titulo,
         'autor': autor,
         'texto': texto,
-        'url': urlElement
+        'url': urlElement,
+        'lancamento': lancamento
     };
 
     const options = {
