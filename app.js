@@ -233,7 +233,7 @@ function listaStories(book) {
         if (!isNaN(dataLancamento.getTime())) { // Verifica se a conversão para data foi bem-sucedida
           const diferencaDias = Math.floor((hoje - dataLancamento) / (1000 * 60 * 60 * 24));
           
-          if (diferencaDias < 10) {
+          if (diferencaDias < 3) {
             newElement.style.display = 'flex';
           };
         };
@@ -285,7 +285,7 @@ function listaStories(book) {
         if (!isNaN(dataLancamento.getTime())) { // Verifica se a conversão para data foi bem-sucedida
           const diferencaDias = Math.floor((hoje - dataLancamento) / (1000 * 60 * 60 * 24));
           
-          if (diferencaDias < 10) {
+          if (diferencaDias < 3) {
             newElement.style.display = 'flex';
           };
         };
