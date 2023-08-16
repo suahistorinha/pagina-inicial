@@ -78,7 +78,7 @@ main {
   margin: 10px auto;
   min-height: 85vh;
   border-radius: 2px;
-  min-width: 100%;
+  width: 100%;
 }
 
 
