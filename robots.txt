@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /privacidade.html
+Disallow: /sobre_nos.html
+Disallow: /termos_de_uso.html
