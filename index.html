@@ -189,16 +189,17 @@
 <script src="app.js"></script>
 
 <script>
-  // Verificação específica para WebView no Android
-  var isAndroidWebView = window.AndroidWebView !== undefined;
+        function isWebView() {
+            return /(android)/i.test(navigator.userAgent) && !/(chrome|firefox|safari)/i.test(navigator.userAgent);
+        }
 
-  window.onload = function() {
-      if (isAndroidWebView) {
-          var gpBox = document.querySelector(".gp-box");
-          gpBox.style.display = "none";
-      }
-  };
-</script>
+        window.onload = function() {
+            if (isWebView()) {
+                var gpBox = document.querySelector(".gp-box");
+                gpBox.style.display = "none";
+            }
+        };
+  </script>
 
 
 </body></html>
