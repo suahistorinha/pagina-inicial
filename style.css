@@ -29,6 +29,23 @@ body {
   
 }
 
+.gp-box { 
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+  margin-bottom: 0;
+}
+
+.gp-box a{ 
+  margin: 0 auto;
+  display: contents;
+
+}
+
+.gp-box img { 
+  width: 50%;
+}
+
 nav{
   padding-top: 20px;
   background: var(--cor_primario);
