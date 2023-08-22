@@ -189,15 +189,25 @@
 <script src="app.js"></script>
 
 <script>
-        function hideBannerInWebView() {
-            // Verifica se estamos dentro da WebView do aplicativo
-            if (typeof AndroidWebView !== 'undefined') {
-                var banner = document.querySelector(".gp-box");
-                if (banner) {
-                    banner.style.display = "none";
+        function isSupportedBrowser() {
+            const supportedBrowsers = ["Chrome", "Firefox", "Safari", "Android Browser"];
+            const userAgent = navigator.userAgent;
+            
+            for (const browser of supportedBrowsers) {
+                if (userAgent.includes(browser)) {
+                    return true;
                 }
             }
+            
+            return false;
         }
+
+        window.onload = function() {
+            if (isSupportedBrowser()) {
+                var gpBox = document.querySelector(".gp-box");
+                gpBox.style.display = "flex";
+            }
+        };
   </script>
 
 
