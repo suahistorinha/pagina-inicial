@@ -74,6 +74,10 @@
         box-shadow: 0px 0px 5px #ccc;
       }
 
+      .gp-box img { 
+        width: 10%;
+      }
+
       /* Adicione mais estilos conforme necessário */
     }
   </style>
@@ -110,6 +114,11 @@
         </div>
     </div>  
   </nav>
+  <div class="gp-box">
+    <a href="https://play.google.com/store/apps/details?id=com.apps.suahistorinha" target="_blank">
+      <img src="Assets/googleplay.svg" alt="Google Play">
+    </a>
+  </div>
  
   <main>
     <div class="content">
@@ -178,6 +187,18 @@
   const analytics = getAnalytics(app);
 </script>
 <script src="app.js"></script>
+
+<script>
+  // Verificação específica para WebView no Android
+  var isAndroidWebView = window.AndroidWebView !== undefined;
+
+  window.onload = function() {
+      if (isAndroidWebView) {
+          var gpBox = document.querySelector(".gp-box");
+          gpBox.style.display = "none";
+      }
+  };
+</script>
 
 
 </body></html>
